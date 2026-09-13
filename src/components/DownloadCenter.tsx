@@ -9,7 +9,7 @@ const DownloadCenter: React.FC = () => {
         <div className='terminal-window'>
           <div className='terminal-header bg-terminal-green text-black font-bold'>
             <span>DOWNLOAD_CENTER</span>
-            <span>[v1.0.0]</span>
+            <span>[v1.0.1]</span>
           </div>
           <div className='p-8 space-y-8 text-center'>
             <div className='space-y-2'>
@@ -20,7 +20,7 @@ const DownloadCenter: React.FC = () => {
             <div className='brutalist-border p-6 text-left space-y-3 inline-block w-full max-w-md mx-auto'>
               <div className='flex justify-between text-xs'>
                 <span className='text-terminal-gray'>FILE:</span>
-                <span className='text-terminal-cyan font-bold'>cpu-scheduler.apk</span>
+                <span className='text-terminal-cyan font-bold'>Process-scheduling-system.apk</span>
               </div>
               <div className='flex justify-between text-xs'>
                 <span className='text-terminal-gray'>PLATFORM:</span>
