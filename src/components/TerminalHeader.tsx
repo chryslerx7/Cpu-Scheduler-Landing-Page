@@ -9,31 +9,33 @@ const TerminalHeader: React.FC = () => {
   ];
 
   return (
-    <header className='fixed top-0 left-0 w-full z-50 p-2 md:p-4'>
-      <div className='max-w-6xl mx-auto terminal-window'>
-        <div className='terminal-header'>
-          <div className='flex items-center gap-2'>
-            <span className='text-terminal-green font-bold'>CPU_SCHEDULER.exe</span>
-            <span className='hidden md:inline text-xs text-terminal-gray'>- v1.0.0 (STABLE)</span>
+    <header className='fixed top-0 left-0 w-full z-50 p-2'>
+      <div className='max-w-6xl mx-auto terminal-window overflow-hidden py-1'>
+        <div className='flex flex-col md:flex-row items-center justify-between px-4 py-1 gap-2'>
+          <div className='flex items-center gap-3'>
+            <div className='flex gap-1'>
+              <div className='w-2 h-2 rounded-full bg-terminal-red'></div>
+              <div className='w-2 h-2 rounded-full bg-terminal-yellow'></div>
+              <div className='w-2 h-2 rounded-full bg-terminal-green'></div>
+            </div>
+            <span className='text-terminal-green font-bold text-xs md:text-sm tracking-tighter'>
+              CPU_SCHEDULER.exe
+            </span>
           </div>
-          <div className='flex gap-1'>
-            <div className='w-3 h-3 rounded-full bg-terminal-red'></div>
-            <div className='w-3 h-3 rounded-full bg-terminal-yellow'></div>
-            <div className='w-3 h-3 rounded-full bg-terminal-green'></div>
-          </div>
+          
+          <nav className='flex items-center gap-4'>
+            {navItems.map((item) => (
+              <a
+                key={item.name}
+                href={item.path}
+                className='text-[10px] md:text-xs font-bold text-terminal-white hover:text-terminal-green transition-colors uppercase'
+              >
+                <span className='text-terminal-gray opacity-70'>/</span>
+                {item.name.toLowerCase()}
+              </a>
+            ))}
+          </nav>
         </div>
-        <nav className='p-3 flex flex-wrap gap-4 justify-center md:justify-start'>
-          {navItems.map((item) => (
-            <a
-              key={item.name}
-              href={item.path}
-              className='text-sm font-bold hover:text-terminal-green transition-colors'
-            >
-              <span className='text-terminal-gray'>&gt; cd /</span>
-              {item.name.toLowerCase()}
-            </a>
-          ))}
-        </nav>
       </div>
     </header>
   );
