@@ -9,14 +9,14 @@ export default {
       colors: {
         terminal: {
           bg: "#0a0a0a",
-          green: "#4af626",
+          green: "#00FF41",
           cyan: "#00ffff",
           yellow: "#ffff00",
           orange: "#ffa500",
           red: "#ff0000",
           purple: "#bc13fe",
           white: "#ffffff",
-          gray: "#333333",
+          gray: "#A0A0A0",
         }
       },
       fontFamily: {
@@ -30,3 +30,4 @@ export default {
   },
   plugins: [],
 }
+
