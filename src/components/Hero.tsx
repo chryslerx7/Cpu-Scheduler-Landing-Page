@@ -55,7 +55,7 @@ const Hero: React.FC = () => {
           <div>SYSTEM://CPU_SCHEDULER</div>
           <div>STATUS: <span className='text-terminal-green'>ONLINE</span></div>
           <div>MODE: PROCESS_SCHEDULING</div>
-          <div>VERSION: 1.0.0</div>
+          <div>VERSION: 1.0.1</div>
           <div className='text-terminal-white'>&gt; ./cpu-scheduler</div>
           <div className='text-terminal-green'>[SYSTEM READY]</div>
         </div>
