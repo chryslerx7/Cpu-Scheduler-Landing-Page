@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-terminal-bg text-terminal-white font-mono selection:bg-terminal-green selection:text-black;
+    overflow-x: hidden;
+  }
+
+  /* Custom Scrollbar for Terminal Look */
+  ::-webkit-scrollbar {
+    width: 12px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-terminal-bg border-l-2 border-terminal-gray;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-terminal-gray border-2 border-terminal-bg;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-terminal-green;
+  }
+}
+
+@layer components {
+  .brutalist-border {
+    @apply border-4 border-terminal-white;
+  }
+  .brutalist-card {
+    @apply border-4 border-terminal-white bg-terminal-bg shadow-brutalist transition-all duration-100;
+  }
+  .brutalist-card:hover {
+    @apply shadow-brutalist-hover translate-x-1 translate-y-1;
+  }
+  .brutalist-btn {
+    @apply px-6 py-3 border-4 border-terminal-white bg-terminal-white text-black font-bold uppercase tracking-tighter shadow-brutalist transition-all duration-100 active:shadow-none active:translate-x-1 active:translate-y-1;
+  }
+  .brutalist-btn-green {
+    @apply border-terminal-green bg-terminal-green text-black;
+  }
+  .terminal-window {
+    @apply border-4 border-terminal-white shadow-brutalist bg-terminal-bg;
+  }
+  .terminal-header {
+    @apply border-b-4 border-terminal-white p-2 bg-terminal-gray flex justify-between items-center;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
