@@ -1,6 +1,6 @@
 import React from 'react';
 import { CONFIG } from '../config';
-import { Download } from 'lucide-react';
+import { Download, Github } from 'lucide-react';
 
 const DownloadCenter: React.FC = () => {
   return (
@@ -20,7 +20,7 @@ const DownloadCenter: React.FC = () => {
             <div className='brutalist-border p-6 text-left space-y-3 inline-block w-full max-w-md mx-auto'>
               <div className='flex justify-between text-xs'>
                 <span className='text-terminal-gray'>FILE:</span>
-                <span className='text-terminal-cyan font-bold'>Process-scheduling-system.apk</span>
+                <span className='text-terminal-cyan font-bold'>cpu-scheduler.apk</span>
               </div>
               <div className='flex justify-between text-xs'>
                 <span className='text-terminal-gray'>PLATFORM:</span>
@@ -36,7 +36,7 @@ const DownloadCenter: React.FC = () => {
               </div>
             </div>
 
-            <div className='pt-6'>
+            <div className='pt-6 flex flex-col gap-4 items-center'>
               <a
                 href={CONFIG.APK_DOWNLOAD_URL}
                 download
@@ -45,6 +45,17 @@ const DownloadCenter: React.FC = () => {
                 <Download size={24} />
                 DOWNLOAD APK
               </a>
+              
+              <a
+                href={CONFIG.GITHUB_RELEASE_URL}
+                target='_blank'
+                rel='noopener noreferrer'
+                className='brutalist-btn text-2xl flex items-center justify-center gap-3 w-full max-w-md mx-auto'
+              >
+                <Github size={24} />
+                GITHUB RELEASE
+              </a>
+              
               <p className='mt-6 text-xs text-terminal-gray uppercase tracking-tighter'>
                 Instructions: Download the APK and install it on an Android device. 
                 Allow installation from unknown sources if prompted.

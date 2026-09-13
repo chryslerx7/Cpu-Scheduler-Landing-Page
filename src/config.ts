@@ -1,4 +1,5 @@
 export const CONFIG = {
-  APK_DOWNLOAD_URL: "C:\Users\jhed\AndroidStudioProjects\GanttChart\app\release\Process-Scheduling-System.apk",
-  APP_PREVIEW_IMAGE: "public/ss.jpg",
+  APK_DOWNLOAD_URL: '/cpu-scheduler.apk',
+  APP_PREVIEW_IMAGE: '/ss.jpg',
+  GITHUB_RELEASE_URL: 'https://github.com/jhed/cpu-scheduler/releases',
 };
